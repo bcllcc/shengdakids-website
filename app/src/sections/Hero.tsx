@@ -24,6 +24,8 @@ const useCountUp = (end: number, duration: number = 2000, start: boolean = false
 
       if (progress < 1) {
         rafRef.current = requestAnimationFrame(step);
+      } else {
+        setCount(end);
       }
     };
 
