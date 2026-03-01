@@ -225,7 +225,7 @@ export const translations: Record<Language, Translations> = {
       products: '产品中心',
       brands: '品牌矩阵',
       contact: '联系我们',
-      switchSite: '官方站',
+      switchSite: '盛达官方站',
     },
     hero: {
       badge: '专业童鞋制造商',

@@ -140,7 +140,7 @@ export const translations: Record<Language, Translations> = {
       brands: '品牌矩阵',
       contact: '联系我们',
       cta: '联系我们',
-      switchSite: '潮流站',
+      switchSite: '盛达潮流站',
     },
     hero: {
       badge: '专业童鞋制造商',
