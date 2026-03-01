@@ -39,7 +39,6 @@ const Products = () => {
             id: 1,
             name: t.products.items.cloudWalk,
             category: 'toddler',
-            price: '¥299',
             image: '/images/product-real-1.png',
             tag: t.products.new,
             colors: ['bg-[#E8DCC4]', 'bg-[#8A9A86]']
@@ -48,7 +47,6 @@ const Products = () => {
             id: 2,
             name: t.products.items.urbanExplorer,
             category: 'boys',
-            price: '¥359',
             image: '/images/product-real-2.png',
             tag: t.products.hot,
             colors: ['bg-[#2D3748]', 'bg-[#D37B65]']
@@ -57,7 +55,6 @@ const Products = () => {
             id: 3,
             name: t.products.items.princessBow,
             category: 'girls',
-            price: '¥329',
             image: '/images/product-real-3.png',
             colors: ['bg-[#FDF4F6]', 'bg-[#E2E8F0]']
         },
@@ -65,7 +62,6 @@ const Products = () => {
             id: 4,
             name: t.products.items.runningShoes,
             category: 'sports',
-            price: '¥399',
             image: '/images/product-real-4.png',
             colors: ['bg-[#3182CE]', 'bg-[#ED8936]']
         },
@@ -73,7 +69,6 @@ const Products = () => {
             id: 5,
             name: t.products.items.classicSchool,
             category: 'boys',
-            price: '¥289',
             image: '/images/product-real-5.png',
             colors: ['bg-[#1A202C]', 'bg-[#F7FAFC]']
         },
@@ -81,7 +76,6 @@ const Products = () => {
             id: 6,
             name: t.products.items.balletFlat,
             category: 'girls',
-            price: '¥259',
             image: '/images/product-real-6.png',
             tag: t.products.limited,
             colors: ['bg-[#FEEBC8]', 'bg-[#E9D8FD]']
@@ -167,10 +161,7 @@ const Products = () => {
 
                             <div className="px-2">
                                 <p className="text-xs font-medium text-brand-text-secondary uppercase tracking-widest mb-2">{product.category}</p>
-                                <div className="flex justify-between items-start mb-4">
-                                    <h3 className="font-sans text-xl text-brand-text font-bold leading-snug pr-4">{product.name}</h3>
-                                    <p className="font-medium text-brand-primary">{product.price}</p>
-                                </div>
+                                <h3 className="font-sans text-xl text-brand-text font-bold leading-snug mb-4">{product.name}</h3>
 
                                 {/* 颜色选择提示点 */}
                                 <div className="flex gap-2">

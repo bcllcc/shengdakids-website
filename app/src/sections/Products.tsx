@@ -36,14 +36,14 @@ const Products = () => {
 
   // 使用用户上传的真实产品图片
   const products = [
-    { id: 1, name: t.mockProducts.p1, category: 'sports', price: '¥129', image: '/images/product-real-3.png' },
-    { id: 2, name: t.mockProducts.p2, category: 'casual', price: '¥99', image: '/images/product-real-4.png' },
-    { id: 3, name: t.mockProducts.p3, category: 'princess', price: '¥159', image: '/images/product-real-2.png' },
-    { id: 4, name: t.mockProducts.p4, category: 'sports', price: '¥149', image: '/images/product-real-6.png' },
-    { id: 5, name: t.mockProducts.p5, category: 'casual', price: '¥89', image: '/images/product-real-5.png' },
-    { id: 6, name: t.mockProducts.p6, category: 'princess', price: '¥179', image: '/images/product-real-8.png' },
-    { id: 7, name: t.mockProducts.p7, category: 'sports', price: '¥139', image: '/images/product-real-7.png' },
-    { id: 8, name: t.mockProducts.p8, category: 'casual', price: '¥109', image: '/images/product-real-1.png' },
+    { id: 1, name: t.mockProducts.p1, category: 'sports', image: '/images/product-real-3.png' },
+    { id: 2, name: t.mockProducts.p2, category: 'casual', image: '/images/product-real-4.png' },
+    { id: 3, name: t.mockProducts.p3, category: 'princess', image: '/images/product-real-2.png' },
+    { id: 4, name: t.mockProducts.p4, category: 'sports', image: '/images/product-real-6.png' },
+    { id: 5, name: t.mockProducts.p5, category: 'casual', image: '/images/product-real-5.png' },
+    { id: 6, name: t.mockProducts.p6, category: 'princess', image: '/images/product-real-8.png' },
+    { id: 7, name: t.mockProducts.p7, category: 'sports', image: '/images/product-real-7.png' },
+    { id: 8, name: t.mockProducts.p8, category: 'casual', image: '/images/product-real-1.png' },
   ];
 
   const filteredProducts = activeCategory === 'all'
@@ -136,8 +136,7 @@ const Products = () => {
                     {product.name}
                   </h3>
                 </div>
-                <div className="flex items-center justify-between mt-6">
-                  <p className="text-black font-black text-2xl md:text-3xl tracking-tighter">{product.price}</p>
+                <div className="flex items-center justify-end mt-6">
                   <button className="w-12 h-12 rounded-xl border-2 border-black flex items-center justify-center bg-white hover:bg-brand-primary hover:shadow-[4px_4px_0px_rgba(0,0,0,1)] transition-all">
                     <span className="text-3xl font-black leading-none -mt-1">+</span>
                   </button>
