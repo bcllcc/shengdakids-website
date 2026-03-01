@@ -95,7 +95,7 @@ const Navigation = () => {
                         {/* Switch Site */}
                         <a
                             href="/trend/"
-                            className="group flex items-center gap-1.5 text-brand-text-secondary hover:text-brand-primary transition-colors"
+                            className="group flex items-center gap-1.5 text-brand-text-secondary hover:text-brand-primary transition-colors whitespace-nowrap"
                         >
                             <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 duration-300" />
                             <span className="text-sm font-medium tracking-wider">{t.nav.switchSite}</span>

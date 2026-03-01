@@ -22,7 +22,7 @@ const Contact = () => {
                     observer.unobserve(entry.target);
                 }
             },
-            { threshold: 0.2, rootMargin: '-50px' }
+            { threshold: 0.05, rootMargin: '0px' }
         );
 
         if (sectionRef.current) {
