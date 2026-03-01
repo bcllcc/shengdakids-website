@@ -31,7 +31,7 @@ const Brands = () => {
       name: t.brands.items.feifei.name,
       enName: 'MAGIC FEIFEI',
       color: 'bg-[#FF3366]',
-      image: '/images/product-real-2.png', // Temporary placeholder until real IP image is provided
+      image: '/images/product-real-2.webp', // Temporary placeholder until real IP image is provided
       desc: t.brands.items.feifei.desc
     },
     {
@@ -39,7 +39,7 @@ const Brands = () => {
       name: t.brands.items.gduck.name,
       enName: 'TUTU DUCK',
       color: 'bg-[#FFD700]',
-      image: '/images/product-real-3.png',
+      image: '/images/product-real-3.webp',
       desc: t.brands.items.gduck.desc
     },
     {
@@ -47,7 +47,7 @@ const Brands = () => {
       name: t.brands.items.migu.name,
       enName: 'MIGU RABBIT',
       color: 'bg-[#9B51E0]',
-      image: '/images/product-real-5.png',
+      image: '/images/product-real-5.webp',
       desc: t.brands.items.migu.desc
     }
   ];

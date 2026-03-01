@@ -39,7 +39,7 @@ const Products = () => {
             id: 1,
             name: t.products.items.cloudWalk,
             category: 'toddler',
-            image: '/images/product-real-1.png',
+            image: '/images/product-real-1.webp',
             tag: t.products.new,
             colors: ['bg-[#E8DCC4]', 'bg-[#8A9A86]']
         },
@@ -47,7 +47,7 @@ const Products = () => {
             id: 2,
             name: t.products.items.urbanExplorer,
             category: 'boys',
-            image: '/images/product-real-2.png',
+            image: '/images/product-real-2.webp',
             tag: t.products.hot,
             colors: ['bg-[#2D3748]', 'bg-[#D37B65]']
         },
@@ -55,28 +55,28 @@ const Products = () => {
             id: 3,
             name: t.products.items.princessBow,
             category: 'girls',
-            image: '/images/product-real-3.png',
+            image: '/images/product-real-3.webp',
             colors: ['bg-[#FDF4F6]', 'bg-[#E2E8F0]']
         },
         {
             id: 4,
             name: t.products.items.runningShoes,
             category: 'sports',
-            image: '/images/product-real-4.png',
+            image: '/images/product-real-4.webp',
             colors: ['bg-[#3182CE]', 'bg-[#ED8936]']
         },
         {
             id: 5,
             name: t.products.items.classicSchool,
             category: 'boys',
-            image: '/images/product-real-5.png',
+            image: '/images/product-real-5.webp',
             colors: ['bg-[#1A202C]', 'bg-[#F7FAFC]']
         },
         {
             id: 6,
             name: t.products.items.balletFlat,
             category: 'girls',
-            image: '/images/product-real-6.png',
+            image: '/images/product-real-6.webp',
             tag: t.products.limited,
             colors: ['bg-[#FEEBC8]', 'bg-[#E9D8FD]']
         }

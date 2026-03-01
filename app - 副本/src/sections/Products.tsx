@@ -36,14 +36,14 @@ const Products = () => {
 
   // 使用用户上传的真实产品图片
   const products = [
-    { id: 1, name: t.mockProducts.p1, category: 'sports', image: '/images/product-real-3.webp' },
-    { id: 2, name: t.mockProducts.p2, category: 'casual', image: '/images/product-real-4.webp' },
-    { id: 3, name: t.mockProducts.p3, category: 'princess', image: '/images/product-real-2.webp' },
-    { id: 4, name: t.mockProducts.p4, category: 'sports', image: '/images/product-real-6.webp' },
-    { id: 5, name: t.mockProducts.p5, category: 'casual', image: '/images/product-real-5.webp' },
-    { id: 6, name: t.mockProducts.p6, category: 'princess', image: '/images/product-real-8.webp' },
-    { id: 7, name: t.mockProducts.p7, category: 'sports', image: '/images/product-real-7.webp' },
-    { id: 8, name: t.mockProducts.p8, category: 'casual', image: '/images/product-real-1.webp' },
+    { id: 1, name: '时尚运动鞋', category: 'sports', price: '¥129', image: '/images/product-real-3.png' },
+    { id: 2, name: '休闲板鞋', category: 'casual', price: '¥99', image: '/images/product-real-4.png' },
+    { id: 3, name: '公主水晶鞋', category: 'princess', price: '¥159', image: '/images/product-real-2.png' },
+    { id: 4, name: '透气跑步鞋', category: 'sports', price: '¥149', image: '/images/product-real-6.png' },
+    { id: 5, name: '百搭小白鞋', category: 'casual', price: '¥89', image: '/images/product-real-5.png' },
+    { id: 6, name: '闪亮公主鞋', category: 'princess', price: '¥179', image: '/images/product-real-8.png' },
+    { id: 7, name: '舒适运动鞋', category: 'sports', price: '¥139', image: '/images/product-real-7.png' },
+    { id: 8, name: '时尚休闲鞋', category: 'casual', price: '¥109', image: '/images/product-real-1.png' },
   ];
 
   const filteredProducts = activeCategory === 'all'
@@ -91,8 +91,8 @@ const Products = () => {
               key={cat.id}
               onClick={() => handleCategoryChange(cat.id)}
               className={`px-6 py-2.5 rounded-xl border-2 border-black text-sm font-bold uppercase tracking-widest transition-all duration-300 ${activeCategory === cat.id
-                ? 'bg-brand-primary text-black shadow-[4px_4px_0px_rgba(0,0,0,1)] -translate-y-1'
-                : 'bg-white text-black hover:bg-brand-primary/20 hover:shadow-[2px_2px_0px_rgba(0,0,0,1)] hover:-translate-y-0.5'
+                  ? 'bg-brand-primary text-black shadow-[4px_4px_0px_rgba(0,0,0,1)] -translate-y-1'
+                  : 'bg-white text-black hover:bg-brand-primary/20 hover:shadow-[2px_2px_0px_rgba(0,0,0,1)] hover:-translate-y-0.5'
                 }`}
             >
               {cat.name}
@@ -121,7 +121,7 @@ const Products = () => {
                 {/* 潮酷 Hover 状态 */}
                 <div className="absolute inset-x-0 bottom-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex justify-center z-10">
                   <button className="px-6 py-3 bg-white border-2 border-black shadow-[4px_4px_0px_rgba(0,0,0,1)] font-black text-black uppercase tracking-wider transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 hover:bg-black hover:text-brand-primary">
-                    <span className="flex items-center gap-2"><Eye className="w-5 h-5" /> {t.mockProducts.quickView}</span>
+                    <span className="flex items-center gap-2"><Eye className="w-5 h-5" /> Quick View</span>
                   </button>
                 </div>
               </div>
@@ -136,7 +136,8 @@ const Products = () => {
                     {product.name}
                   </h3>
                 </div>
-                <div className="flex items-center justify-end mt-6">
+                <div className="flex items-center justify-between mt-6">
+                  <p className="text-black font-black text-2xl md:text-3xl tracking-tighter">{product.price}</p>
                   <button className="w-12 h-12 rounded-xl border-2 border-black flex items-center justify-center bg-white hover:bg-brand-primary hover:shadow-[4px_4px_0px_rgba(0,0,0,1)] transition-all">
                     <span className="text-3xl font-black leading-none -mt-1">+</span>
                   </button>
@@ -166,8 +167,8 @@ const Products = () => {
                   key={i}
                   onClick={() => setCurrentPage(i)}
                   className={`w-2 h-2 rounded-full transition-all duration-300 ${currentPage === i
-                    ? 'bg-brand-primary w-6'
-                    : 'bg-brand-border hover:bg-brand-primary/50'
+                      ? 'bg-brand-primary w-6'
+                      : 'bg-brand-border hover:bg-brand-primary/50'
                     }`}
                 />
               ))}
