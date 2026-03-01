@@ -133,7 +133,7 @@ const Navigation = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden absolute top-full left-0 right-0 bg-white/98 backdrop-blur-md shadow-lg transition-all duration-300 ${isMobileMenuOpen
+        className={`md:hidden absolute top-full left-0 right-0 mt-2 bg-white border-4 border-black border-b-[6px] rounded-2xl shadow-[4px_4px_0px_rgba(0,0,0,1)] transition-all duration-300 ${isMobileMenuOpen
           ? 'opacity-100 translate-y-0'
           : 'opacity-0 -translate-y-4 pointer-events-none'
           }`}
@@ -158,7 +158,7 @@ const Navigation = () => {
                 e.preventDefault();
                 scrollToSection(link.href);
               }}
-              className="px-4 py-3 text-brand-text-secondary font-medium hover:bg-brand-bg-light hover:text-brand-primary rounded-lg transition-colors"
+              className="px-4 py-3 text-black font-black uppercase tracking-wider hover:bg-brand-primary rounded-lg transition-colors"
             >
               {link.name}
             </a>
@@ -173,7 +173,7 @@ const Navigation = () => {
             </a>
             <a
               href="/"
-              className="flex items-center gap-2 px-4 py-3 text-brand-text-secondary font-medium hover:bg-brand-bg-light hover:text-brand-primary rounded-lg transition-colors"
+              className="flex items-center gap-2 px-4 py-3 text-black font-black uppercase tracking-wider hover:bg-brand-primary rounded-lg transition-colors"
             >
               <ArrowUpRight className="w-4 h-4" />
               <span>{t.nav.switchSite}</span>
