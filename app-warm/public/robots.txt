@@ -1,0 +1,11 @@
+# Welcome all bots and AI agents!
+# Wenzhou Shengda Footwear Co., Ltd. (温州盛达鞋业有限公司)
+# https://www.shengdakids.com
+
+User-agent: *
+Allow: /
+
+# AI Agent information file
+# Visit /llms.txt for structured company information
+
+Sitemap: https://www.shengdakids.com/sitemap.xml
