@@ -50,6 +50,14 @@ const Footer = () => {
                                     </a>
                                 </li>
                             ))}
+                            <li>
+                                <a
+                                    href="/trend/"
+                                    className="text-brand-text-secondary hover:text-brand-primary transition-colors text-sm font-medium tracking-wide inline-flex items-center gap-1"
+                                >
+                                    {t.nav.switchSite} →
+                                </a>
+                            </li>
                         </ul>
                     </div>
 

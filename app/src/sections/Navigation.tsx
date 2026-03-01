@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Menu, X, Phone, Globe } from 'lucide-react';
+import { Menu, X, Phone, Globe, ArrowUpRight } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 
 const Navigation = () => {
@@ -80,6 +80,15 @@ const Navigation = () => {
 
           {/* CTA, Phone & Language Switch */}
           <div className="hidden lg:flex items-center gap-2 xl:gap-4">
+            {/* Switch Site */}
+            <a
+              href="/"
+              className="flex items-center gap-1.5 px-3 py-1.5 xl:py-2 rounded-xl border-2 border-black hover:bg-brand-primary hover:shadow-[2px_2px_0px_rgba(0,0,0,1)] hover:-translate-y-0.5 hover:-translate-x-0.5 transition-all text-[13px] xl:text-sm font-black text-black uppercase"
+            >
+              <ArrowUpRight className="w-4 h-4 xl:w-5 xl:h-5" strokeWidth={2.5} />
+              <span>{t.nav.switchSite}</span>
+            </a>
+
             {/* Language Switch */}
             <button
               onClick={toggleLanguage}
@@ -161,6 +170,13 @@ const Navigation = () => {
             >
               <Phone className="w-4 h-4" />
               +86 136 7658 2993
+            </a>
+            <a
+              href="/"
+              className="flex items-center gap-2 px-4 py-3 text-brand-text-secondary font-medium hover:bg-brand-bg-light hover:text-brand-primary rounded-lg transition-colors"
+            >
+              <ArrowUpRight className="w-4 h-4" />
+              <span>{t.nav.switchSite}</span>
             </a>
           </div>
         </nav>

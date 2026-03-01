@@ -8,6 +8,7 @@ export interface Translations {
     brands: string;
     contact: string;
     cta: string;
+    switchSite: string;
   };
   hero: {
     badge: string;
@@ -139,6 +140,7 @@ export const translations: Record<Language, Translations> = {
       brands: '品牌矩阵',
       contact: '联系我们',
       cta: '联系我们',
+      switchSite: '潮流站',
     },
     hero: {
       badge: '专业童鞋制造商',
@@ -280,6 +282,7 @@ export const translations: Record<Language, Translations> = {
       brands: 'Our Brands',
       contact: 'Contact',
       cta: 'Contact Us',
+      switchSite: 'TREND',
     },
     hero: {
       badge: 'Professional Children\'s Shoe Manufacturer',

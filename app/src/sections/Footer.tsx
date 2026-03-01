@@ -59,6 +59,14 @@ const Footer = () => {
                   </a>
                 </li>
               ))}
+              <li>
+                <a
+                  href="/"
+                  className="text-white/70 text-sm hover:text-white transition-colors inline-flex items-center gap-1"
+                >
+                  {t.nav.switchSite} →
+                </a>
+              </li>
             </ul>
           </div>
 
