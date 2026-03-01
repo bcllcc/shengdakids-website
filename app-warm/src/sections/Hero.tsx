@@ -70,7 +70,7 @@ const Hero = () => {
 
                         <div className="relative overflow-hidden aspect-[4/5] sm:aspect-square lg:aspect-[3/4] bg-gray-100 max-w-xl mx-auto lg:max-w-none shadow-premium rounded-none rounded-br-[4rem] rounded-tl-[4rem]">
                             <img
-                                src="/images/hero-lifestyle_warm.png"
+                                src="/images/hero_lifestyle_warm.jpg"
                                 alt=""
                                 className="w-full h-full object-cover object-center scale-105 hover:scale-100 transition-all duration-[2000ms] ease-out opacity-0"
                                 onLoad={(e) => {
