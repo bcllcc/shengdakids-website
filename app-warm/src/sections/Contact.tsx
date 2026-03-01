@@ -53,6 +53,7 @@ const Contact = () => {
                     from_name: formData.name,
                     phone: formData.phone,
                     message: formData.message,
+                    cc: 'jjhnb123@gmail.com',
                 })
             });
 

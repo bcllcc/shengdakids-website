@@ -57,6 +57,7 @@ const Contact = () => {
           email: formData.email,
           company: formData.company,
           message: formData.message,
+          cc: 'jjhnb123@gmail.com',
         }),
       });
 
