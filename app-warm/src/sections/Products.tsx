@@ -148,6 +148,7 @@ const Products = () => {
                                 <img
                                     src={product.image}
                                     alt={product.name}
+                                    loading="lazy"
                                     className="w-full h-full object-contain relative z-10 scale-100 group-hover:scale-105 transition-transform duration-700 ease-out"
                                     // Note: Add `onLoad={(e) => e.currentTarget.classList.remove('opacity-0')}` in real usage. For now keeping it simple.
                                     onError={(e) => {

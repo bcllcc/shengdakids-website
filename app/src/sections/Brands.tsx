@@ -114,6 +114,7 @@ const Brands = () => {
                   <img
                     src={brand.image}
                     alt={brand.name}
+                    loading="lazy"
                     className="w-full h-full object-contain relative z-10 transition-transform duration-700 ease-out group-hover:scale-125 group-hover:-rotate-3 drop-shadow-2xl"
                   />
                 </div>

@@ -24,6 +24,7 @@ const Footer = () => {
                                 <img
                                     src="/images/shengda-logo.png"
                                     alt="Shengda Footwear"
+                                    loading="lazy"
                                     className="w-full h-full object-contain object-left"
                                 />
                             </div>
