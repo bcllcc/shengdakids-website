@@ -89,8 +89,9 @@ const Brands = () => {
 
                                 <img
                                     src={brand.image}
-                                    alt={brand.name}
-                                    className="relative z-10 w-[90%] h-[90%] object-contain filter drop-shadow-[0_20px_30px_rgba(0,0,0,0.1)] transition-transform duration-500 group-hover:-translate-y-6 group-hover:scale-110"
+                                    alt=""
+                                    className="relative z-10 w-[90%] h-[90%] object-contain filter drop-shadow-[0_20px_30px_rgba(0,0,0,0.1)] transition-all duration-500 group-hover:-translate-y-6 group-hover:scale-110 opacity-0"
+                                    onLoad={(e) => e.currentTarget.classList.replace('opacity-0', 'opacity-100')}
                                     onError={(e) => { e.currentTarget.style.display = 'none'; }}
                                 />
 

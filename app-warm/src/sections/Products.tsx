@@ -147,12 +147,10 @@ const Products = () => {
                                 </div>
                                 <img
                                     src={product.image}
-                                    alt={product.name}
-                                    className="w-full h-full object-contain relative z-10 scale-100 group-hover:scale-105 transition-transform duration-700 ease-out"
-                                    // Note: Add `onLoad={(e) => e.currentTarget.classList.remove('opacity-0')}` in real usage. For now keeping it simple.
-                                    onError={(e) => {
-                                        e.currentTarget.style.display = 'none'; // fallback if image doesn't exist
-                                    }}
+                                    alt=""
+                                    className="w-full h-full object-contain relative z-10 scale-100 group-hover:scale-105 transition-all duration-700 ease-out opacity-0"
+                                    onLoad={(e) => e.currentTarget.classList.replace('opacity-0', 'opacity-100')}
+                                    onError={(e) => { e.currentTarget.style.display = 'none'; }}
                                 />
 
                                 {/* 标签 */}

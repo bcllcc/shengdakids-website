@@ -56,8 +56,9 @@ const Navigation = () => {
                         <div className={`transition-all duration-300 ${isScrolled ? 'w-48 h-16 md:w-64 md:h-20 lg:w-[20rem] lg:h-24 xl:w-[28rem] xl:h-32' : 'w-56 h-20 md:w-72 md:h-24 lg:w-[24rem] lg:h-28 xl:w-[32rem] xl:h-36'} flex-shrink-0`}>
                             <img
                                 src="/images/shengda-logo.png"
-                                alt="Shengda Footwear"
-                                className="w-full h-full object-contain object-left"
+                                alt=""
+                                className="w-full h-full object-contain object-left opacity-0 transition-opacity duration-300"
+                                onLoad={(e) => e.currentTarget.classList.replace('opacity-0', 'opacity-100')}
                             />
                         </div>
                     </a>
