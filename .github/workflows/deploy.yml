@@ -1,0 +1,70 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      # 安装依赖 - 主站
+      - name: Install dependencies (app-warm)
+        working-directory: app-warm
+        run: npm ci
+
+      # 安装依赖 - 潮流站
+      - name: Install dependencies (app)
+        working-directory: app
+        run: npm ci
+
+      # 构建主站 → 根目录
+      - name: Build main site (app-warm)
+        working-directory: app-warm
+        run: npm run build
+
+      # 构建潮流站 → /trend/
+      - name: Build trend site (app)
+        working-directory: app
+        run: npm run build
+
+      # 合并输出
+      - name: Combine build outputs
+        run: |
+          mkdir -p combined-dist/trend
+          cp -r app-warm/dist/* combined-dist/
+          cp -r app/dist/* combined-dist/trend/
+          echo "shengdakids.com" > combined-dist/CNAME
+          touch combined-dist/.nojekyll
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: combined-dist
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

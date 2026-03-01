@@ -1,0 +1,8 @@
+node_modules/
+dist/
+app/dist/
+app-warm/dist/
+app/node_modules/
+app-warm/node_modules/
+*.local
+.DS_Store

@@ -1,0 +1,151 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --brand-primary: #111827;
+        /* Sleek Black for high-end streetwear main CTAs */
+        --brand-secondary: #FDE047;
+        /* Energetic Yellow (G.Duck nod) */
+        --brand-accent: #3B82F6;
+        /* Vibrant Blue accent */
+        --brand-text: #111827;
+        /* Near pure black for crisp contrast */
+        --brand-text-secondary: #6B7280;
+        /* Cool modern gray */
+        --brand-bg: #FFFFFF;
+        /* Pure White background for maximum pop */
+        --brand-bg-light: #F9FAFB;
+        /* Very subtle off-white for section contrast */
+        --brand-border: #E5E7EB;
+        /* Crisp light gray border */
+    }
+
+    html {
+        scroll-behavior: smooth;
+        font-size: 16px;
+    }
+
+    body {
+        @apply bg-brand-bg text-brand-text font-sans antialiased;
+        overflow-x: hidden;
+    }
+
+    /* 优雅的文本选取颜色 */
+    ::selection {
+        @apply bg-brand-accent text-brand-text;
+    }
+
+    /* 柔和的滚动条 */
+    ::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    ::-webkit-scrollbar-track {
+        @apply bg-brand-bg-light;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        @apply bg-gray-300 rounded-full;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        @apply bg-gray-400;
+    }
+}
+
+@layer components {
+    .max-w-content {
+        @apply max-w-[1400px] mx-auto;
+    }
+
+    /* 高级质感按钮 */
+    .btn-primary {
+        @apply inline-flex items-center justify-center px-8 py-4 bg-brand-primary text-white font-medium tracking-wide rounded-full transition-all duration-300 ease-out active:translate-y-0 active:shadow-none;
+    }
+
+    .btn-primary:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 20px rgba(17, 24, 39, 0.2);
+    }
+
+    .btn-secondary {
+        @apply inline-flex items-center justify-center px-8 py-4 bg-white text-brand-text font-medium tracking-wide border border-brand-border rounded-full transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-lg hover:border-gray-300 active:translate-y-0 active:shadow-none;
+    }
+
+    /* 高级卡片基类 - 调整为更锋利、现代感 */
+    .card-premium {
+        @apply bg-white rounded-3xl border border-gray-100 transition-all duration-300 ease-out hover:-translate-y-1;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    }
+
+    .card-premium:hover {
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+    }
+
+    /* 优雅标题栏 */
+    .section-title {
+        @apply font-sans text-5xl md:text-7xl text-brand-text mb-6 leading-[1.05] font-black tracking-tight uppercase;
+    }
+
+    .section-subtitle {
+        @apply text-brand-text-secondary text-lg md:text-xl font-light tracking-wide max-w-2xl mx-auto;
+    }
+
+    /* 水印底字 */
+    .watermark-text {
+        @apply absolute font-sans font-black text-gray-100 select-none -z-10 leading-none tracking-tighter;
+    }
+
+    /* 高级编辑部背景图案 */
+    .bg-grid-pattern {
+        background-image:
+            linear-gradient(to right, rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+            linear-gradient(to bottom, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+        background-size: 40px 40px;
+    }
+}
+
+@layer utilities {
+    .text-balance {
+        text-wrap: balance;
+    }
+
+    /* 柔和玻璃拟态 */
+    .glass-soft {
+        @apply bg-white/80 backdrop-blur-xl border border-white/50;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
+    }
+}
+
+/* 优雅浮现动画 */
+@keyframes floatUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-float-up {
+    animation: floatUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn 1s ease-out forwards;
+}
