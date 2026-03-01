@@ -116,7 +116,6 @@ const Products = () => {
                 <img
                   src={product.image}
                   alt={product.name}
-                  loading="lazy"
                   className="w-full h-full object-contain p-6 mix-blend-multiply transition-transform duration-700 group-hover:scale-110 group-hover:-rotate-3"
                 />
                 {/* 潮酷 Hover 状态 */}

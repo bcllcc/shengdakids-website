@@ -83,7 +83,6 @@ const About = () => {
                             <img
                                 src="/images/about-new.jpg"
                                 alt="Shengda Factory History"
-                                loading="lazy"
                                 className="w-full h-full object-cover"
                             />
                         </div>

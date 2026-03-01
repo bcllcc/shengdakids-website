@@ -94,7 +94,6 @@ const Factory = () => {
                 <img
                   src="/images/design-studio.jpg"
                   alt="设计研发"
-                  loading="lazy"
                   className="w-full h-48 object-cover hover:scale-105 transition-transform duration-500"
                 />
               </div>
@@ -102,7 +101,6 @@ const Factory = () => {
                 <img
                   src="/images/quality-control.jpg"
                   alt="品质检测"
-                  loading="lazy"
                   className="w-full h-48 object-cover hover:scale-105 transition-transform duration-500"
                 />
               </div>
@@ -112,7 +110,6 @@ const Factory = () => {
                 <img
                   src="/images/warehouse.jpg"
                   alt="仓储物流"
-                  loading="lazy"
                   className="w-full h-64 object-cover hover:scale-105 transition-transform duration-500"
                 />
               </div>

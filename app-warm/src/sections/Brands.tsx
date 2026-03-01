@@ -90,7 +90,6 @@ const Brands = () => {
                                 <img
                                     src={brand.image}
                                     alt={brand.name}
-                                    loading="lazy"
                                     className="relative z-10 w-[90%] h-[90%] object-contain filter drop-shadow-[0_20px_30px_rgba(0,0,0,0.1)] transition-transform duration-500 group-hover:-translate-y-6 group-hover:scale-110"
                                     onError={(e) => { e.currentTarget.style.display = 'none'; }}
                                 />
