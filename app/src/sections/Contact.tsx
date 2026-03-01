@@ -41,7 +41,7 @@ const Contact = () => {
 
     try {
       // 请在 https://web3forms.com/ 注册并获取免费的 Access Key 替换这里的 'YOUR_ACCESS_KEY_HERE'
-      const ACCESS_KEY = 'YOUR_ACCESS_KEY_HERE';
+      const ACCESS_KEY = '85b05447-680d-42d0-9686-dbf5a9e86e87';
 
       const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
