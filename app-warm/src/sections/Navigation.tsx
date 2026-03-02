@@ -53,7 +53,7 @@ const Navigation = () => {
                         }}
                         className="flex items-center group transition-transform duration-300 hover:opacity-80"
                     >
-                        <div className={`transition-all duration-300 ${isScrolled ? 'w-48 h-16 md:w-64 md:h-20 lg:w-[20rem] lg:h-24 xl:w-[28rem] xl:h-32' : 'w-56 h-20 md:w-72 md:h-24 lg:w-[24rem] lg:h-28 xl:w-[32rem] xl:h-36'} flex-shrink-0`}>
+                        <div className={`transition-all duration-300 ${isScrolled ? 'w-36 h-12 md:w-48 md:h-16 lg:w-[14rem] lg:h-20 xl:w-[20rem] xl:h-24' : 'w-44 h-16 md:w-56 md:h-20 lg:w-[18rem] lg:h-24 xl:w-[24rem] xl:h-28'} flex-shrink-0`}>
                             <img
                                 src="/images/shengda-logo.png"
                                 alt=""

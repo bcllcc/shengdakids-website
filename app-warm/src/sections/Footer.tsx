@@ -20,7 +20,7 @@ const Footer = () => {
                     {/* 品牌信息列 */}
                     <div className="lg:col-span-1">
                         <a href="#hero" onClick={handleScrollToTop} className="inline-block mb-6 transition-opacity hover:opacity-80">
-                            <div className="w-64 h-16 md:w-80 md:h-20">
+                            <div className="w-48 h-12 md:w-64 md:h-16">
                                 <img
                                     src="/images/shengda-logo.png"
                                     alt="Shengda Footwear"

@@ -52,7 +52,7 @@ const Navigation = () => {
             }}
             className="flex items-center group"
           >
-            <div className="w-40 h-14 md:w-56 md:h-16 lg:w-64 lg:h-20 xl:w-72 xl:h-24 flex-shrink-0 transition-all duration-300">
+            <div className="w-32 h-10 md:w-44 md:h-12 lg:w-52 lg:h-16 xl:w-60 xl:h-20 flex-shrink-0 transition-all duration-300">
               <img
                 src="/images/shengda-logo.png"
                 alt="Shengda Footwear"
