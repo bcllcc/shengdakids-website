@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+  background: #F5F5F4;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* 大按钮触摸优化 */
+button, [role="button"] {
+  min-height: 44px;
+  cursor: pointer;
+}
+
+input, select, textarea {
+  font-size: 16px; /* 防止 iOS 缩放 */
+}

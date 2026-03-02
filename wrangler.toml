@@ -1,0 +1,13 @@
+name = "shengdakids"
+compatibility_date = "2024-09-23"
+
+# D1 数据库绑定
+[[d1_databases]]
+binding = "DB"
+database_name = "shengda-products"
+database_id = "TODO_填入实际ID"
+
+# R2 存储桶绑定
+[[r2_buckets]]
+binding = "IMAGES"
+bucket_name = "shengda-product-images"

@@ -1,13 +1,14 @@
 import { useEffect, useRef, useState } from 'react';
 import { Eye, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
+import { useProducts } from '../hooks/useProducts';
 
 const Products = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
   const [activeCategory, setActiveCategory] = useState('all');
   const [currentPage, setCurrentPage] = useState(0);
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -34,8 +35,8 @@ const Products = () => {
     { id: 'princess', name: t.products.categories.princess },
   ];
 
-  // 使用用户上传的真实产品图片
-  const products = [
+  // 硬编码数据作为 fallback（API 挂了照样显示）
+  const fallbackProducts = [
     { id: 1, name: t.mockProducts.p1, category: 'sports', image: '/images/product-real-3.webp' },
     { id: 2, name: t.mockProducts.p2, category: 'casual', image: '/images/product-real-4.webp' },
     { id: 3, name: t.mockProducts.p3, category: 'princess', image: '/images/product-real-2.webp' },
@@ -45,6 +46,9 @@ const Products = () => {
     { id: 7, name: t.mockProducts.p7, category: 'sports', image: '/images/product-real-7.webp' },
     { id: 8, name: t.mockProducts.p8, category: 'casual', image: '/images/product-real-1.webp' },
   ];
+
+  // 优先从 API 获取，失败自动降级到 fallback
+  const products = useProducts(language, fallbackProducts);
 
   const filteredProducts = activeCategory === 'all'
     ? products

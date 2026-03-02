@@ -1,9 +1,10 @@
 import { useState, useEffect, useRef } from 'react';
 import { ArrowRight } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
+import { useProducts } from '../hooks/useProducts';
 
 const Products = () => {
-    const { t } = useLanguage();
+    const { t, language } = useLanguage();
     const [activeCategory, setActiveCategory] = useState('all');
     const [isVisible, setIsVisible] = useState(false);
     const sectionRef = useRef<HTMLDivElement>(null);
@@ -34,53 +35,18 @@ const Products = () => {
         { id: 'sports', label: t.products.categories.sports }
     ];
 
-    const products = [
-        {
-            id: 1,
-            name: t.products.items.cloudWalk,
-            category: 'toddler',
-            image: '/images/product-real-1.webp',
-            tag: t.products.new,
-            colors: ['bg-[#E8DCC4]', 'bg-[#8A9A86]']
-        },
-        {
-            id: 2,
-            name: t.products.items.urbanExplorer,
-            category: 'boys',
-            image: '/images/product-real-2.webp',
-            tag: t.products.hot,
-            colors: ['bg-[#2D3748]', 'bg-[#D37B65]']
-        },
-        {
-            id: 3,
-            name: t.products.items.princessBow,
-            category: 'girls',
-            image: '/images/product-real-3.webp',
-            colors: ['bg-[#FDF4F6]', 'bg-[#E2E8F0]']
-        },
-        {
-            id: 4,
-            name: t.products.items.runningShoes,
-            category: 'sports',
-            image: '/images/product-real-4.webp',
-            colors: ['bg-[#3182CE]', 'bg-[#ED8936]']
-        },
-        {
-            id: 5,
-            name: t.products.items.classicSchool,
-            category: 'boys',
-            image: '/images/product-real-5.webp',
-            colors: ['bg-[#1A202C]', 'bg-[#F7FAFC]']
-        },
-        {
-            id: 6,
-            name: t.products.items.balletFlat,
-            category: 'girls',
-            image: '/images/product-real-6.webp',
-            tag: t.products.limited,
-            colors: ['bg-[#FEEBC8]', 'bg-[#E9D8FD]']
-        }
+    // 硬编码数据作为 fallback（API 挂了照样显示）
+    const fallbackProducts = [
+        { id: 1, name: t.products.items.cloudWalk, category: 'toddler', image: '/images/product-real-1.webp', tag: t.products.new, colors: ['bg-[#E8DCC4]', 'bg-[#8A9A86]'] },
+        { id: 2, name: t.products.items.urbanExplorer, category: 'boys', image: '/images/product-real-2.webp', tag: t.products.hot, colors: ['bg-[#2D3748]', 'bg-[#D37B65]'] },
+        { id: 3, name: t.products.items.princessBow, category: 'girls', image: '/images/product-real-3.webp', colors: ['bg-[#FDF4F6]', 'bg-[#E2E8F0]'] },
+        { id: 4, name: t.products.items.runningShoes, category: 'sports', image: '/images/product-real-4.webp', colors: ['bg-[#3182CE]', 'bg-[#ED8936]'] },
+        { id: 5, name: t.products.items.classicSchool, category: 'boys', image: '/images/product-real-5.webp', colors: ['bg-[#1A202C]', 'bg-[#F7FAFC]'] },
+        { id: 6, name: t.products.items.balletFlat, category: 'girls', image: '/images/product-real-6.webp', tag: t.products.limited, colors: ['bg-[#FEEBC8]', 'bg-[#E9D8FD]'] },
     ];
+
+    // 优先从 API 获取，失败自动降级到 fallback
+    const products = useProducts(language, fallbackProducts);
 
     const filteredProducts = activeCategory === 'all'
         ? products
